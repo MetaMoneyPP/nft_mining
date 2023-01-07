@@ -338,7 +338,8 @@ const onSubmitContractWrite = async (event) => {
     console.group('onSubmitContractWrite');
 
     const greeting = event.currentTarget.greeting.value;
-    console.log({ greeting });
+    const nftId = parseInt(greeting, 16);
+    console.log({ nftId });
 
     // Reset & Set Loading State
     const preContractWrite = document.getElementById('pre-contract-write');
@@ -350,7 +351,7 @@ const onSubmitContractWrite = async (event) => {
     // Setup Interface + Encode Function
     const SetGreeting = CONTRACT_ABI.find(i => i.name === 'mineNow');
     const interface = new ethers.utils.Interface([SetGreeting]);
-    const encodedFunction = interface.encodeFunctionData(`${SetGreeting.name}`, [greeting]);
+    const encodedFunction = interface.encodeFunctionData(`${SetGreeting.name}`, [nftId]);
     console.log({ encodedFunction });
 
     // Request setGreeting
