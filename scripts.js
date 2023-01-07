@@ -339,7 +339,7 @@ const onSubmitContractWrite = async (event) => {
 
     const greeting = event.currentTarget.greeting.value;
     //const nftId = parseInt(greeting, 10);
-    console.log({ nftId });
+    //console.log({ nftId });
 
     // Reset & Set Loading State
     const preContractWrite = document.getElementById('pre-contract-write');
