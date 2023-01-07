@@ -23,12 +23,12 @@ const CHAIN_CONNECTED = {
  */
 const CHAIN_DICTIONARY = {
     1: 'Ethereum Mainnet',
-    5: 'Goerli Testnet',
-    137: 'Polygon Mainnet',
-    1337: 'Localhost',
-    1402: 'zkEVM Testnet',
-    80001: 'Mumbai Testnet',
-    11155111: 'Sepolia Testnet'
+    5: 'Goerli Testnet'
+//    137: 'Polygon Mainnet',
+//    1337: 'Localhost',
+//    1402: 'zkEVM Testnet',
+//    80001: 'Mumbai Testnet',
+//    11155111: 'Sepolia Testnet'
 };
 
 /**
