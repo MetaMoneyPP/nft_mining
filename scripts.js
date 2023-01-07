@@ -338,7 +338,7 @@ const onSubmitContractWrite = async (event) => {
     console.group('onSubmitContractWrite');
 
     const greeting = event.currentTarget.greeting.value;
-    const nftId = parseInt(greeting, 16);
+    const nftId = parseInt(greeting, 10);
     console.log({ nftId });
 
     // Reset & Set Loading State
