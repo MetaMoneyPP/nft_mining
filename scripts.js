@@ -319,7 +319,7 @@ const onSubmitContractRead = async (event) => {
     button.setAttribute('disabled', true);
 
     // Setup Interface + Encode Function
-    const GetGreeting = CONTRACT_ABI.find(i => i.name === 'getGreeting');
+    const GetGreeting = CONTRACT_ABI.find(i => i.name === 'checkMiningToken');
     const interface = new ethers.utils.Interface([GetGreeting]);
     const encodedFunction = interface.encodeFunctionData(`${GetGreeting.name}`);
     console.log({ encodedFunction });
@@ -351,8 +351,7 @@ const onSubmitContractWrite = async (event) => {
     console.group('onSubmitContractWrite');
 
     const greeting = event.currentTarget.greeting.value;
-    //const nftId = parseInt(greeting, 10);
-    //console.log({ nftId });
+    console.log({ greeting });
 
     // Reset & Set Loading State
     const preContractWrite = document.getElementById('pre-contract-write');
@@ -362,7 +361,7 @@ const onSubmitContractWrite = async (event) => {
     button.setAttribute('disabled', true);
 
     // Setup Interface + Encode Function
-    const SetGreeting = CONTRACT_ABI.find(i => i.name === 'checkMiningToken');
+    const SetGreeting = CONTRACT_ABI.find(i => i.name === 'mineNow');
     const interface = new ethers.utils.Interface([SetGreeting]);
     const encodedFunction = interface.encodeFunctionData(`${SetGreeting.name}`, [greeting]);
     console.log({ encodedFunction });
