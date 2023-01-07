@@ -65,7 +65,21 @@ const BLOCKCHAIN_EXPLORERS = {
 /**
  * ABI needed to interpret how to interact with the contract
  */
-const CONTRACT_ABI = [];
+const CONTRACT_ABI = [
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "nftId",
+						"type": "uint256"
+					}
+				],
+				"name": "mineNow",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		];
 
 // Functions
 // ========================================================
