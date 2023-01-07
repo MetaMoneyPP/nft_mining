@@ -67,6 +67,19 @@ const BLOCKCHAIN_EXPLORERS = {
  */
 const CONTRACT_ABI = [
 			{
+				"inputs": [],
+				"name": "checkMiningToken",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
 				"inputs": [
 					{
 						"internalType": "uint256",
