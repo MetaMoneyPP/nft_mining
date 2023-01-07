@@ -41,7 +41,7 @@ const CHAIN_ID_REQUIRED = 5; //Goerli
  */
 const CONTRACT_ON_CHAINS = {
     1: '0x76460E73eadE1DDe315E07a5eCa092448c193a2F',
-    5: '0x2B8c5438Dcc738372c035fE2C8DFc1095d08a01c'
+    5: '0x4599d4c750C9bC0C846c7C0b31d63bc6b0c5Fb2E'
     //137: '0x375F01b156D9BdDDd41fd38c5CC74C514CB71f73',
     //1337: '',
     //1402: '0x76460E73eadE1DDe315E07a5eCa092448c193a2F',
@@ -349,7 +349,7 @@ const onSubmitContractWrite = async (event) => {
     button.setAttribute('disabled', true);
 
     // Setup Interface + Encode Function
-    const SetGreeting = CONTRACT_ABI.find(i => i.name === 'mineNow');
+    const SetGreeting = CONTRACT_ABI.find(i => i.name === 'checkMiningToken');
     const interface = new ethers.utils.Interface([SetGreeting]);
     const encodedFunction = interface.encodeFunctionData(`${SetGreeting.name}`, [greeting]);
     console.log({ encodedFunction });
